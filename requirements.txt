@@ -2,6 +2,6 @@ Flask
 requests
 bs4
 nudenet
-cv2
+opencv-python
 urllib3
 gunicorn
