@@ -1,6 +1,7 @@
 Flask
-beautifulsoup4
 requests
+bs4
 nudenet
-opencv-python
+cv2
+urllib3
 gunicorn
