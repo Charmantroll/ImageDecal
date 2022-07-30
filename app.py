@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from time import sleep
 import urllib3; urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #from nudenet import NudeClassifier
-import cv2
+#import cv2
 import sys
 
 #numsxd = NudeClassifier()
