@@ -7,11 +7,11 @@ import os
 from bs4 import BeautifulSoup
 from time import sleep
 import urllib3; urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-from nudenet import NudeClassifier
+#from nudenet import NudeClassifier
 #import cv2
 import sys
 
-numsxd = NudeClassifier()
+#numsxd = NudeClassifier()
 
 class DecalClass():
     def __init__(self, cookie, location, name):
@@ -80,17 +80,17 @@ def upload():
     url = request.args.get('url')
     name = request.args.get('name')
     if DescargarImagen(url):
-        quetanseguro = numsxd.classify("lol.png")
+        #quetanseguro = numsxd.classify("lol.png")
 
-        print(quetanseguro["lol.png"]["safe"])
+        #print(quetanseguro["lol.png"]["safe"])
         
 
 
-        if quetanseguro['lol.png']['safe'] > 0.5:
-           decal = DecalClass(ROBLOXSECID, "lol.png", name)
-           decal.upload()
+        #if quetanseguro['lol.png']['safe'] > 0.5:
+        decal = DecalClass(ROBLOXSECID, "lol.png", name)
+        decal.upload()
         
-           return jsonify({"status": "ok"})
+        return jsonify({"status": "ok"})
     else:
         return jsonify({"status": "error"})
 
